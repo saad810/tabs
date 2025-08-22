@@ -1,0 +1,46 @@
+{
+    "manifest_version": 3,
+    "name": "0 Tabs",
+    "description": "Tabs operations",
+    "version": "1.0.0",
+    "action": {
+        "default_icon": {
+            "32": "/icons/icon.png"
+        }
+    },
+    "background": {
+        "service_worker": "src/scripts/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "src/scripts/content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "activeTab",
+        "tabs",
+        "scripting",
+        "notifications"
+    ],
+    "host_permissions": [
+        "https://*/*",
+        "http://*/*"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "tabs.html",
+                "tabs.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}

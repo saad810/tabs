@@ -5,3 +5,6 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     // Display or process data
 });
+
+
+const root = document.getElementById("root");

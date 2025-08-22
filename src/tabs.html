@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- set icon -->
-   <link rel="icon" type="image/x-icon" href="../icons/icon.png">
+    <!-- set icon -->
+    <link rel="icon" type="image/x-icon" href="../public/icons/icon.png">
     <title>Tabs Manager</title>
 </head>
+
 <body>
-    <div id="tabs"></div>
+    <section id="root">
+        <div class="title">Tabs Manager</div>
+        <div id="content-area">
+            <div class="sidebar">
+                <div class="item"><span>Browser</span></div>
+            </div>
+            <div class="window-content">
+                <div>
+                    <div>
+                        <p id="windowName"></p>
+                        <div id="imageContainer">
+                            <div class="image"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <button id="openWindow"></button>
+                        <button id="saveWindow"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs-content"></div>
+        </div>
+    </section>
     <script src="scripts/tabs.js"></script>
 </body>
+
 </html>

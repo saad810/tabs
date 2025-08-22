@@ -1,0 +1,251 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+#root {
+    min-height: 100vh;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+    padding: 14px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+#content-area {
+    display: flex;
+    flex: 1;
+    height: calc(100vh - 56px);
+}
+
+.sidebar {
+    width: 180px;
+    border-right: 1px solid #eee;
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.sidebar .item:hover {
+    background: #f1f1f1;
+}
+
+.sidebar .sidebar-icon svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+}
+
+.sidebar span {
+    font-size: 14px;
+    color: #333;
+}
+
+.window-bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+#window-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Window content */
+.window-content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #fff;
+}
+
+.more-count {
+    font-size: 14px;
+    color: #666;
+    padding: 0 2px;
+}
+
+.errorMessage {
+    color: red;
+    font-weight: bold;
+    padding: 12px 16px;
+    background-color: #ffe6e6;
+}
+
+.window-card {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: start;
+    border-bottom: 1px solid #eee;
+    /* padding-bottom: 10px; */
+    padding: 10px 10px;
+}
+
+#windowName {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+#imageContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+}
+.window-card.selected {
+  /* border: 2px solid #4A90E2;   blue border */
+  background-color: #f0f8ff;   /* light background */
+}
+
+#imageContainer .image {
+    width: 32px;
+    height: 32px;
+    background-color: #ccc;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-left: -10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.active-tab {
+    background-color: #d4f8d4;
+    /* soft green */
+
+}
+
+.sleeping-tab {
+    background-color: #e6eaf0;
+    /* subtle bluish gray */
+
+}
+
+.frozen-tab {
+    background-color: #f0e6ff;
+    /* pale lavender */
+}
+
+/* Buttons in window-card */
+/* .window-card button {
+    background: #007bff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+    margin-left: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    color: #fff;
+}
+
+.window-card button:hover {
+    background-color: #0056b3;
+} */
+
+.window-card button svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* Tabs content (larger than window-content) */
+.tabs-content {
+    flex: 2;
+    /* more space than window-content */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 16px;
+    /* padding: 16px; */
+    background: #f9f9f9;
+    border: 1px dashed #cdcdcd;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+#tab {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Tabs items */
+#image {
+    width: 32px;
+    height: 32px;
+    background-color: #ccc;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+#siteTitle {
+    font-size: 14px;
+    font-weight: bold;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#actions {
+    display: flex;
+    gap: 6px;
+}
+
+button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+#actions button:hover {
+    background-color: #0056b3;
+}
+
+#actions button svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
